@@ -13,7 +13,10 @@ import cucumber.api.junit.Cucumber;
  * Run the feature file (existence.feature) and load scenarios
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "pretty" }, features="classpath:world/we/deserve/existence.feature")
+@CucumberOptions(plugin = { "pretty" }, 
+glue = { "world.we.deserve", "cucumber.api.spring"}
+,features="classpath:existence.feature"
+)
 public class RunCukesTest {
 
 }

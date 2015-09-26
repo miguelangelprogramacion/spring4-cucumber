@@ -11,7 +11,10 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<!-- CUCUMBER -->
-		<cucumber.version>1.2.2</cucumber.version>
+		<cucumber.version>1.2.4</cucumber.version>
+		<!-- Spring test -->
+		<!-- Many problems with Spring test version -->
+		<springtest.version>4.1.0.RELEASE</springtest.version>
 
 	</properties>
 
@@ -22,6 +25,13 @@
 			<artifactId>spring-boot-starter</artifactId>
 			<version>1.2.6.RELEASE</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+
 
 		<!-- Cucumber -->
 		<dependency>
@@ -37,5 +47,21 @@
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-spring</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- Spring Test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${springtest.version}</version>
+		</dependency>
+
 	</dependencies>
 </project>

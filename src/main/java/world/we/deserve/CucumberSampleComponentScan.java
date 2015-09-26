@@ -3,6 +3,7 @@
  */
 package world.we.deserve;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,4 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class CucumberSampleComponentScan {
 
+	public static void main(String[] args) {
+        SpringApplication.run(CucumberSampleComponentScan.class, args);
+    }
 }
