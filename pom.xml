@@ -2,12 +2,19 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>world.we.deserve</groupId>
-  <artifactId>sprin4-cucumber</artifactId>
+  <artifactId>spring4-cucumber</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>sprin4-cucumber</name>
+  <name>spring4-cucumber</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  
+  <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter</artifactId>
+	<version>1.2.6.RELEASE</version>
+</dependency>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
