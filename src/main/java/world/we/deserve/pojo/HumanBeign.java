@@ -91,6 +91,6 @@ public class HumanBeign implements Observer{
 	 */
 	@Override
 	public void update() {
-		this.leftLiveDays -= 1;		
+		this.leftLiveDays += 1;		
 	}
 }

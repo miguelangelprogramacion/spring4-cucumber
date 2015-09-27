@@ -21,7 +21,6 @@ public class SpaceTime implements Subject<HumanBeign>{
 	
 	private List<HumanBeign> observers;
 	private String message;
-	private boolean changed;
 	private final Object MUTEX= new Object();
 	
 	/**
@@ -62,9 +61,7 @@ public class SpaceTime implements Subject<HumanBeign>{
 		List<Observer> observersLocal = null;
 		//synchronization is used to make sure any observer registered after message is received is not notified
 		synchronized (MUTEX) {
-			if (!changed) return;
 			observersLocal = new ArrayList<>(this.observers);
-			this.changed=false;
 		}
 		observersLocal.forEach(obj -> obj.update());		
 	}
@@ -82,5 +79,10 @@ public class SpaceTime implements Subject<HumanBeign>{
 	 */
 	public void aDayIsFinished() {		
 		this.notifyObservers();
+	}
+	
+	public List<HumanBeign> getHumanity()
+	{
+		return this.observers;
 	}
 }
