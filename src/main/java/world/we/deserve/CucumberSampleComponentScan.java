@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 
 import uk.co.jemos.podam.api.PodamFactory;
 import uk.co.jemos.podam.api.PodamFactoryImpl;
-//import uk.co.jemos.podam.test.dto.SimplePojoToTestSetters;
 
 /**
  * @author Miguel Ángel Dev (miguelangelprogramacion@gmail.com)

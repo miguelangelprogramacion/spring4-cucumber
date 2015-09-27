@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import cucumber.api.java.en.Given;
 import uk.co.jemos.podam.api.PodamFactory;
+import world.we.deserve.bo.SpaceTime;
 import world.we.deserve.pojo.HumanBeign;
 
 /**
@@ -25,11 +26,13 @@ public class ExistenceStepsdef {
 	@Autowired
 	PodamFactory factory;
 	
+	@Autowired
+	SpaceTime spaceTime;
+	
 	@Given("^We are human beings in particular space-time$")
 	public void i_m_a_human_being_in_particular_space_time() throws Throwable {
 		ArrayList list = factory.manufacturePojo(ArrayList.class,HumanBeign.class);
-		list.forEach(System.out::println);
-		System.out.println(list.size());
+		spaceTime.register(list);
 	}
 	
 }
