@@ -33,7 +33,7 @@ public class SpaceTime implements Subject{
 
 	public void register(List<Observer> observerList)
 	{
-		observers.addAll(observerList);
+		observerList.forEach(obj -> register(obj));
 	}
 	
 	/* (non-Javadoc)
@@ -74,5 +74,12 @@ public class SpaceTime implements Subject{
 	@Override
 	public Object getUpdate(Observer obj) {
 		return this.message;
+	}
+
+	/**
+	 * Notify to all registered HB, that one day is finished
+	 */
+	public void aDayIsFinished() {		
+		this.notifyObservers();
 	}
 }

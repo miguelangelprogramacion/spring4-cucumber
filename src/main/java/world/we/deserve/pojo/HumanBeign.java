@@ -6,12 +6,14 @@ package world.we.deserve.pojo;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import uk.co.jemos.podam.common.PodamIntValue;
+import world.we.deserve.design.observer.Observer;
+import world.we.deserve.design.observer.Subject;
 
 /**
  * @author Miguel Ángel Dev (miguelangelprogramacion@gmail.com)
  *
  */
-public class HumanBeign {
+public class HumanBeign implements Observer{
 
 	@PodamIntValue(minValue = 0, maxValue = 36525)
 	private int leftLiveDays;
@@ -73,4 +75,13 @@ public class HumanBeign {
 	       append("leftLiveDays", leftLiveDays).
 	       toString();
 	   }
+
+
+	/* (non-Javadoc)
+	 * @see world.we.deserve.design.observer.Observer#update()
+	 */
+	@Override
+	public void update() {
+		this.leftLiveDays -= 1;		
+	}
 }
