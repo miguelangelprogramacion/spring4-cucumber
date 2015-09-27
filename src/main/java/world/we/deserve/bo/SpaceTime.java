@@ -10,15 +10,16 @@ import org.springframework.stereotype.Component;
 
 import world.we.deserve.design.observer.Observer;
 import world.we.deserve.design.observer.Subject;
+import world.we.deserve.pojo.HumanBeign;
 
 /**
  * @author Miguel Ángel Dev (miguelangelprogramacion@gmail.com)
  *
  */
 @Component
-public class SpaceTime implements Subject{
+public class SpaceTime implements Subject<HumanBeign>{
 	
-	private List<Observer> observers;
+	private List<HumanBeign> observers;
 	private String message;
 	private boolean changed;
 	private final Object MUTEX= new Object();
@@ -28,10 +29,10 @@ public class SpaceTime implements Subject{
 	 */
 	public SpaceTime() {
 		super();
-		observers = new ArrayList<Observer>();
+		observers = new ArrayList<HumanBeign>();
 	}
 
-	public void register(List<Observer> observerList)
+	public void register(List<HumanBeign> observerList)
 	{
 		observerList.forEach(obj -> register(obj));
 	}
@@ -40,7 +41,7 @@ public class SpaceTime implements Subject{
 	 * @see world.we.deserve.design.observer.Subject#register(java.util.Observer)
 	 */
 	@Override
-	public void register(Observer obj) {
+	public void register(HumanBeign obj) {
 		if(obj == null) throw new NullPointerException("Null Observer");
 		if(!observers.contains(obj)) observers.add(obj);		
 	}
@@ -49,7 +50,7 @@ public class SpaceTime implements Subject{
 	 * @see world.we.deserve.design.observer.Subject#unregister(java.util.Observer)
 	 */
 	@Override
-	public void unregister(Observer obj) {
+	public void unregister(HumanBeign obj) {
 		 observers.remove(obj);	
 	}
 
@@ -72,7 +73,7 @@ public class SpaceTime implements Subject{
 	 * @see world.we.deserve.design.observer.Subject#getUpdate(java.util.Observer)
 	 */
 	@Override
-	public Object getUpdate(Observer obj) {
+	public Object getUpdate(HumanBeign obj) {
 		return this.message;
 	}
 

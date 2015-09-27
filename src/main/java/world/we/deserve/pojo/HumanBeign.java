@@ -40,6 +40,15 @@ public class HumanBeign implements Observer{
 
 
 	/**
+	 * @param item
+	 */
+	public HumanBeign(HumanBeign item) {
+		this.leftLiveDays = item.leftLiveDays;
+		this.name = item.name;
+	}
+
+
+	/**
 	 * @return the name
 	 */
 	public String getName() {
