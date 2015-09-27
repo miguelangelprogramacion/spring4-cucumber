@@ -5,14 +5,17 @@ package world.we.deserve.pojo;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import uk.co.jemos.podam.common.PodamIntValue;
+
 /**
  * @author Miguel Ángel Dev (miguelangelprogramacion@gmail.com)
  *
  */
 public class HumanBeign {
 
-	int leftLiveDays;
-	String name;
+	@PodamIntValue(minValue = 0, maxValue = 36525)
+	private int leftLiveDays;
+	private String name;
 	
 	/**
 	 * 

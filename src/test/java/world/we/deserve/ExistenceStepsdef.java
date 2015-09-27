@@ -3,6 +3,8 @@
  */
 package world.we.deserve;
 
+import java.util.ArrayList;
+
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -25,8 +27,9 @@ public class ExistenceStepsdef {
 	
 	@Given("^We are human beings in particular space-time$")
 	public void i_m_a_human_being_in_particular_space_time() throws Throwable {
-		HumanBeign s = factory.manufacturePojo(HumanBeign.class);
-		System.out.println(s);
+		ArrayList list = factory.manufacturePojo(ArrayList.class,HumanBeign.class);
+		list.forEach(System.out::println);
+		System.out.println(list.size());
 	}
 	
 }
