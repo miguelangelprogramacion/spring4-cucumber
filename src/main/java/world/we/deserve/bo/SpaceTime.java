@@ -22,8 +22,15 @@ public class SpaceTime implements Subject{
 	private String message;
 	private boolean changed;
 	private final Object MUTEX= new Object();
-
 	
+	/**
+	 * 
+	 */
+	public SpaceTime() {
+		super();
+		observers = new ArrayList<Observer>();
+	}
+
 	public void register(List<Observer> observerList)
 	{
 		observers.addAll(observerList);
