@@ -7,7 +7,6 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import uk.co.jemos.podam.common.PodamIntValue;
 import world.we.deserve.design.observer.Observer;
-import world.we.deserve.design.observer.Subject;
 
 /**
  * @author Miguel Ángel Dev (miguelangelprogramacion@gmail.com)
@@ -24,7 +23,6 @@ public class HumanBeign implements Observer{
 	 */
 	public HumanBeign() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 
@@ -91,6 +89,6 @@ public class HumanBeign implements Observer{
 	 */
 	@Override
 	public void update() {
-		this.leftLiveDays += 1;		
+		this.leftLiveDays -= 1;		
 	}
 }
