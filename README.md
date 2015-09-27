@@ -1,10 +1,10 @@
 # spring4-cucumber
 
 spring4-cucumber is a proof of concept, that it has the aim of:
-  - Practise BDD and TDD.
-  - Practise control version with git, focus mainly in branching and eclipse plugin.
+  - Practice BDD and TDD.
+  - Practice control version with git, focus mainly in branching and eclipse plugin.
   - Learning TDD and BDD tools such as Cucumber or Podam, and its combine in a Spring project.
-  - Practise using java 8
+  - Practice using java 8
 
 The project has been provided with several tags, to illustrate the evolution in the development. 
   
