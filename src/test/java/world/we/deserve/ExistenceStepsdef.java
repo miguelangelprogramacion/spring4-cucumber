@@ -11,6 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 import uk.co.jemos.podam.api.PodamFactory;
 import world.we.deserve.bo.SpaceTime;
 import world.we.deserve.pojo.HumanBeign;
@@ -35,4 +36,8 @@ public class ExistenceStepsdef {
 		spaceTime.register(list);
 	}
 	
+	@When("^A day is finished$")
+	public void a_day_is_finished() throws Throwable {
+		spaceTime.aDayIsFinished();
+	}
 }
